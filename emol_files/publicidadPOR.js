@@ -1,0 +1,17 @@
+var OA_zones = {
+	'POR_300x560_A': 1,
+	'POR_300x560_B': 2,
+	'POR_300x560_C': 3,
+	'POR_690_226': 38,
+	'POR_ITT_690x0': 37,
+	'POR_SUPER_1': 41,
+	'POR_SUPER_2': 39,
+	'POR_SUPER_3': 40,
+	'POR_SUPER_4': 104,
+	'POR_SUPER_5': 105,
+	'POR_OREJA_1': 18,
+	'POR_OREJA_2': 19,
+	'POR_PUSH_DOWN': 22,
+	'POR_300x560_D': 301,
+	'POR_300x560_E' : 425
+}

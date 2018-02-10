@@ -1,0 +1,156 @@
+.linkText {
+  color: #039;
+  text-decoration: none;
+}
+
+.hourText {
+  color: #900
+}
+
+.boxSport {
+  font-family: Arial,Helvetica,sans-serif;
+  width: 100%;
+  
+}
+
+.boxSport__title {
+  font-size: 16px;
+  color: #039;
+  font-weight: 400;
+  font-stretch: ultra-condensed;
+  line-height: 1.2;  
+}
+
+
+.boxSport__desc {
+  font-size: 12px;
+  margin: 0 0 3px;
+  padding: 0;
+}
+
+.boxMain {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 0;
+  font-family: Arial,Helvetica,sans-serif;
+  text-align: left;
+
+}
+
+.boxMain__mainTitle {
+  font-size: 25px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 7px 0 5px;
+ }
+
+ .boxMain__title {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 21px;
+ }
+
+.boxMain__desc {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.boxMain__relateds {
+  height: auto;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.boxMain__relateds ul {
+  list-style-type: square;
+  list-style-position: outside;
+  line-height: 20px;
+}
+
+.boxMain__relateds li {
+  margin-left: 15px;
+}
+
+.boxDebate {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  text-align: : left;
+  margin-bottom: 5px;
+}
+
+.boxDebate__image {
+  height: 200px;
+  border: none;
+}
+
+.boxDebate__question {
+  margin: 5px 0;
+  font-weight: 700;
+  margin-bottom: 3px
+} 
+
+.boxDebate__question a {
+  font-size: 12px;
+}
+.boxDebate__separator {
+  border-style: solid;
+  border-color: #FBB531;
+  border-width: 1px;
+  height: 1px;
+  background-color: #FBB531;
+}
+
+.boxFrase {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  position: relative;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+.boxFrase__section {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 5px 4px 10px;
+  margin-top: 0;
+  color: #000;
+  background: #e8e7e5;
+  text-transform: uppercase;
+  border-bottom: 4px solid #1679b0;
+  margin-bottom: 10px;
+}
+
+.boxFrase__frase {
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #555;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.boxFrase__autor {
+  color: #555;
+  margin-top: 8px;
+  line-height: 13px;
+  font-size: 11px; 
+  text-align: right;
+}
+
+.autor__name {
+  width: 90%;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+ }
+ 
+.autor__cargo {
+ width:90%;
+  color: #666;
+  font-weight: 400;
+}
+    
