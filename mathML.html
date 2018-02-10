@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
 <head>
   <script src="http://fred-wang.github.io/mathml.css/mspace.js"></script>
   <link rel="stylesheet" href="./common_css/math.css">
@@ -7,15 +7,35 @@
 
   <h1>Test of mathMl</h1>
   <p>
+     <span aria-hidden=true>Número Cualquiera</span>
     <math>
         <ms lquote="$" rquote=""><mn>14.333</mn></ms>
     </math>
   </p>
 
   <p>
+     <span aria-hidden=true>Número negativo</span>
     <math class="debt">
         <ms lquote="- $" rquote=""><mn>15.430</mn></ms>
     </math>
+  </p>
+
+  <p>
+    <span aria-hidden=true>Número en Frances</span>
+    <span lang="fr">
+    <math class="debt">
+        <ms lquote="- $" rquote=""><mn>15.430</mn></ms>
+    </math>
+    </span>
+  </p>
+
+  <p>
+    <span aria-hidden=true>Número en Ingles</span>
+    <span lang="en  ">
+    <math class="debt">
+        <ms lquote="- $" rquote=""><mn>15.430</mn></ms>
+    </math>
+    </span>
   </p>
   
 </body>
