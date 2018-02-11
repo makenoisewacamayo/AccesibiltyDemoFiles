@@ -4,18 +4,39 @@
   <link rel="stylesheet" href="./common_css/math.css">
 </head>
 <body>
-  <h1>Sin mathMl </h1>
+  <h1>Exemplos de números telefónicos </h1>
+  <h2>Número telefónico sin mathML</h2>
   <p>
-    <span aria-hidden=true>
-      <img src="assets/telefono.png"  width="32" height="32" alt="">
+    <span aria-label="Número Telefonico">
+      <img src="assets/telefono.png"  width="32" height="32" alt="" aria-hidden=true>
     </span>
     (09) 3444 5678
   </p>
-
-  <h1>Test of mathMl</h1>
+   <h2>Número telefónico con mathML</h2>
+   <p>
+     <span aria-label="Número Telefonico">
+      <img src="assets/telefono.png"  width="32" height="32" alt="" aria-hidden=true>
+    </span>
+     <math>
+        <ms lquote="(" rquote=")">
+          <mn>0</mn>
+          <mn>9</mn>
+        </ms>
+        <mn>3</mn>
+        <mn>4</mn>
+        <mn>4</mn>
+        <mn>4</mn>
+        <mspace/>
+        <mn>5</mn>
+        <mn>6</mn>
+        <mn>7</mn>
+        <mn>8</mn>              
+    </math>
+  </p>
+  <h1>Números con mathMl</h1>
   <p>
-     <span aria-hidden=true>N&uacute;mero Cualquiera</span>
-    <math>
+    <span id="explain1">N&uacute;mero Cualquiera</span>
+    <math aria-labelledby="explain1">
         <ms lquote="$" rquote="">
           <mn>14.333</mn>
         </ms>
@@ -23,8 +44,8 @@
   </p>
 
   <p>
-     <span aria-hidden=true>N&uacute;mero negativo</span>
-    <math class="debt">
+     <span id="explain2">N&uacute;mero negativo</span>
+    <math class="debt"  aria-labelledby="explain2">
       <mtext class="sr-only">menos</mtext>
       <mo aria-hidden=true>-</mo>
       <ms lquote="$" rquote="">
@@ -34,9 +55,9 @@
   </p>
 
   <p>
-    <span aria-hidden=true>N&uacute;mero en Frances</span>
+    <span id="explain3" >N&uacute;mero en Frances</span>
     <span lang="fr">
-    <math class="debt">
+    <math class="debt" aria-labelledby="explain3">
       <mtext class="sr-only">moins</mtext>
       <mo aria-hidden=true>-</mo> 
       <ms lquote="$" rquote="">
@@ -47,9 +68,9 @@
   </p>
 
   <p>
-    <span aria-hidden=true>N&uacute;mero en Ingles</span>
+    <span id="explain4">N&uacute;mero en Ingles</span>
     <span lang="en">
-    <math class="debt">
+    <math class="debt" aria-labelledby="explain4">
         <mtext class="sr-only">minus</mtext>
         <mo aria-hidden=true>-</mo> 
         <ms lquote="$" rquote="">
