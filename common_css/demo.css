@@ -291,4 +291,35 @@
   width: 1px !important;
   overflow: hidden;
 }
-    
+cartola__wrap {
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+}
+
+.cartola {
+  border-collapse: collapse;
+  width: 100%;
+}
+.cartola > caption {
+  text-align: center;
+  color: rgb(14, 13, 13);
+  background-color: #fdb068;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+}
+
+.cartola__encabezado, .cartola__celda {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.cartola__encabezado {
+  background-color: #666;
+}
+.cartola__celda {
+  background-color: #e8e7e5;
+}
