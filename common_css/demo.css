@@ -327,3 +327,17 @@ cartola__wrap {
 .celda__nroOperacion {
   display: inline-flex;
 }
+
+.cartola__audio {
+  display: flex;
+  text-align: center; 
+  align-items: center;
+  justify-content: center;
+}
+.cartola__audio span {
+  align-self: center;
+}
+.cartola__audio  img {
+  max-width: 30px;
+  max-height: 30px;
+}
