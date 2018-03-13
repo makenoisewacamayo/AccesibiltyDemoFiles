@@ -323,3 +323,7 @@ cartola__wrap {
 .cartola__celda {
   background-color: #e8e7e5;
 }
+
+.celda__nroOperacion {
+  display: inline-flex;
+}
