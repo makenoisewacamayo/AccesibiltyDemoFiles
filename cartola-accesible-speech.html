@@ -1,5 +1,6 @@
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./common_css/reset.css">
     <link rel="stylesheet" href="./common_css/text.css">
     <link rel="stylesheet" href="./common_css/960_24_col.css">
@@ -11,13 +12,17 @@
         <div class="grid_24">
             <div class="cartola__audio">
                 <span>
-                    <button id="cartola__botonAudio"><img src="assets/audio-ico.png" alt="Inicia el audio" /> </button>
+                    <button id="cartola__botonAudioPlay"><img src="assets/audio-ico.png" alt="Inicia el audio" /> </button>
+                </span>
+                <span>
+                <button id="cartola__botonAudioPause">
+                    <img src="assets/mute-ico.png" alt="Detiene el audio" /> </button>
                 </span>
             </div>
-            <section aria-labelledby="cartola__id" class="">    
+            <section aria-labelledby="cartola__id" class="seccion" id="cartola_ultimosMovimientos">    
             <br aria-hidden="true"/>
             <span class="sr-only" id="cartola__id">Ultimos movimientos de su cartola en L&iacute;nea</span>
-            <table class="cartola">
+            <table class="seccion_cartola">
                 <caption aria-hidden="true">Ultimos movimientos de su cartola en L&iacute;nea</caption>
                 <tr>
                     <th scope="col" class="cartola__encabezado">Fecha</th>
@@ -27,7 +32,7 @@
                     <th scope="col" class="cartola__encabezado">Dep&oacute;sitos/Abonos</th>
                     <th scope="col" class="cartola__encabezado">saldo</th>
                 </tr>
-                <tr>
+                <tr class="cartola__columna">
                     <th scope="row" class="cartola__celda">
                         <span aria-hidden="true">14/02/2018</span>
                         <span class="sr-only">14 de Febrero de 2018</span>
@@ -37,7 +42,7 @@
                         STGO. PRINCIPAL
                     </td>
                     <td class="cartola__celda">
-                        <math class="celda__nroOperacion">
+                        <math class="celda__nroOperacion" lang="es">
                             <mn>5</mn>
                             <mn>5</mn>
                             <mn>2</mn>
@@ -48,7 +53,7 @@
                     </td>
                     <td class="cartola__celda">
                         <span class="sr-only">Se han gastado </span>
-                        <math>
+                        <math lang="es">
                             <ms lquote="$" rquote="">
                                 <mn>60.789</mn>
                             </ms>
@@ -56,7 +61,7 @@
                     </td>
                     <td class="cartola__celda">
                         <span class="sr-only">Se han depositado </span>
-                        <math>
+                        <math lang="es">
                             <ms lquote="$" rquote="">
                                 <mn>0</mn>
                             </ms>
@@ -64,21 +69,21 @@
                     </td>
                     <td class="cartola__celda">
                         <span class="sr-only">Saldo en tu cuenta </span>
-                        <math>
+                        <math lang="es">
                             <ms lquote="$" rquote="">
                                 <mn>400.000</mn>
                             </ms>
                         </math>
                     </td>
                 </tr>
-                <tr>
+                <tr class="cartola__columna">
                     <th scope="row" class="cartola__celda">
-                        <span aria-hidden="true">12/02/2018</span>
+                        <span aria-hidden="true" lang="es">12/02/2018</span>
                         <span class="sr-only">12 de Febrero de 2018</span>
                     </th>
                     <td class="cartola__celda">STGO. PRINCIPAL</td>
                     <td class="cartola__celda">
-                        <math class="celda__nroOperacion">
+                        <math class="celda__nroOperacion" lang="es">
                             <mn>5</mn>
                             <mn>5</mn>
                             <mn>2</mn>
@@ -89,7 +94,7 @@
                     </td>
                     <td class="cartola__celda">
                         <span class="sr-only">Se han gastado</span>
-                        <math>
+                        <math lang="es">
                             <ms lquote="$" rquote="">
                                 <mn>3.199</mn>
                             </ms>
@@ -97,7 +102,7 @@
                     </td>
                     <td class="cartola__celda">
                         <span class="sr-only">Se han depositado</span>
-                        <math>
+                        <math lang="es">
                             <ms lquote="$" rquote="">
                                 <mn>0</mn>
                             </ms>
@@ -105,7 +110,7 @@
                     </td>
                     <td class="cartola__celda">
                         <span class="sr-only">Saldo en tu cuenta </span>
-                        <math>
+                        <math lang="es">
                             <ms lquote="$" rquote="">
                                 <mn>460.789</mn>
                             </ms>
@@ -119,8 +124,27 @@
     </main>
     <script type="text/javascript">
         if ('speechSynthesis' in window) {
-            debugger;
-                // Synthesis support. Make your web apps talk!
+
+            var text = document.querySelector('table.seccion_cartola').textContent;
+         
+            window.speechSynthesis;
+
+            document.getElementById('cartola__botonAudioPlay').addEventListener('click', function (event) {
+                 event.preventDefault();
+                var cartola =  document.getElementById("cartola_ultimosMovimientos");
+                var msg = new SpeechSynthesisUtterance();
+                msg.lang = 'es-AR';
+                var voices = window.speechSynthesis.getVoices();
+                if ( voices.length >  0) {
+                    msg.voice = voices[8];
+                    msg.rate = 0.1;
+                    msg.text = text;
+                    window.speechSynthesis.speak(msg);
+                }
+            });
+            
+            
+            
         } else {
             alert("No soporta speechSynthesis");
         }
