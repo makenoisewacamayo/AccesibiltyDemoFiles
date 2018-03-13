@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
 <head>
   <link rel="stylesheet" href="./common_css/reset.css">
 <link rel="stylesheet" href="./common_css/text.css">
@@ -9,10 +9,11 @@
 <div class="container_24">
    <div class="grid_24" role="navigation">
      <div class="primaryMenu">
-        <ul class="primaryMenu__menu" role="menubar">
+        <ul class="primaryMenu__menu" role="menubar" aria-label="Menú pricipal">
             <li class="primaryMenu__item primaryMenu__item--first" role="menuitem">
-              <a href="#" role="button">
-              <img src="assets/home_emol.png" alt="http://static.emol.cl/emol50emol.com">
+              <a href="#" role="button" aria-labelledby="home">
+                <span id="home" class="sr-only">Volver a la portada</span>
+                <img src="assets/home_emol.png" aria-hidden="true">
               </a>
             </li>
             <li class="primaryMenu__item primaryMenu__item--activo" role="menuitem" aria-current="page">
@@ -38,23 +39,26 @@
             </li>
             <li class="primaryMenu__item nav_mult" role="menuitem">
               <a href="#" role="button">
-                <img title="Fotos" src="assets/emolfotos.png">
+                <span class="sr-only">Fotos de Wmol</span>
+                <img title="Fotos" src="assets/emolfotos.png" aria-hidden="true">
               </a>
             </li>
             <li class=" primaryMenu__item nav_mult" role="menuitem">
               <a href="#" role="button">
-                <img title="EmolTV" src="assets/emolTv.png">
+                <span class="sr-only">Wmol Tv</span>
+                <img title="EmolTV" src="assets/emolTv.png" aria-hidden="true">
               </a>
             </li>
             <li class="primaryMenu__item nav_mult" role="menuitem">
               <a href="#" role="button">
-                <img title="360" src="assets/menu360.svg">
+                <span class="sr-only">Wmol 360</span>
+                <img title="360" src="assets/menu360.svg" aria-hidden="true">
               </a>
             </li>
           </ul>
       </div>
      <div class="secondaryMenu">
-       <ul class="secondaryMenu__menu" role="menubar">
+       <ul class="secondaryMenu__menu" role="menubar" aria-label="Menu Secundario">
         <li class="secondaryMenu__item" role="menuitem">
           <a href="#" role="button">Chile</a>
         </li>
@@ -69,7 +73,7 @@
         </li>
         <li class="secondaryMenu__item" role="menuitem">
           <a href="#" role="button">Documentos</a>
-        </li">
+        </li>
         <li class="secondaryMenu__item" role="menuitem">
           <a href="#" role="button">Multimedia</a>
         </li>
@@ -81,10 +85,10 @@
    <div role="main" >
 
      <div class="grid_6" role="region" aria-labelledby="sport__section">
-      <h2 id="sport__section">Deportes</h2>
+      <h2 id="sport__section" role="heading" aria-level="1">Deportes</h2>
       
       <div class="boxSport" role="article">
-        <div class="boxSport__title">
+        <div class="boxSport__title" role="heading" aria-level="2">
           <a href="#" role="button" class="linkText boxSport__titleLink">Wanderers logra la haza&ntilde;a en Per&uacute; y con un golazo de Marco Medel avanza de fase en la Libertadores</a>
         </div>
         <div class="boxSport__desc">
@@ -92,7 +96,7 @@
         </div>
       </div>
       <div class="boxSport" role="article">
-        <div class="boxSport__title">
+        <div class="boxSport__title" role="heading" aria-level="2">
           <a href="#" role="button" class="linkText boxSport__titleLink">Mira el golazo de Marco Medel a Melgar que le dio a Wanderers la clasificaci&oacute;n en la Copa Libertadores</a>
         </div>
         <div class="boxSport__desc">
@@ -102,9 +106,9 @@
 
      </div>
      <div class="grid_12" role="region" aria-labelledby="main_news">
-      <h2 id="main_news">Noticias Principales</h2>
+      <h2 id="main_news" role="heading" aria-level="1">Noticias Principales</h2>
        <div class="boxMain" role="article">
-        <h1 class="boxMain__MainTitle">
+        <h1 class="boxMain__MainTitle" role="heading" aria-level="2" >
           <a href="" class="linkText boxMain__titleLink">
           Mu&ntilde;oz acusa "presiones" a oposici&oacute;n venezolana para firmar acuerdo "que no contempla garant&iacute;a" electoral
           </a>
@@ -121,7 +125,7 @@
          </div>
        </div>
        <div class="boxMain" role="article">
-        <h3 class="boxMain__title">
+        <h3 class="boxMain__title" role="heading" aria-level="2">
           <a href="" class="linkText boxMain__titleLink">
           Operaci&oacute;n Hurac&aacute;n": FBI comienza peritajes en oficinas de Carabineros
           </a>
@@ -139,32 +143,35 @@
        </div>
       </div>
      <div class="grid_6" role="region" aria-labelledby="debate__section">
-        <h2 id="debate__section">Debate</h2>
+        <h2 id="debate__section" role="heading" aria-level="1">Debate</h2>
 
         <div class="boxDebate" role="article">
           <div class="boxDebate__separator"></div>
-          <div class="boxDebate__title">
-            <a href="#" role="button" class="linktext">
+          <div class="boxDebate__title" aria-hidden="true">
+            <a href="#"  class="linktext" >
                <img src="assets/image_01.jpg" alt="" class="boxDebate__image">
             </a>
           </div>
           <div class="boxDebate__question">
-            <h5><a href="#" role="button" class="linkText">
+            <h5 role="heading" aria-level="2">
+              <a href="#" role="button" class="linkText">
               Inform&aacute;tico y software usado en "Operaci&oacute;n Hurac&aacute;n": "Es muy poco tiempo" para haberlo desarrollado. ¿Est&aacute;s de acuerdo?
-            </a></h5>
+            </a>
+          </h5>
           </div>
           <div class="boxDebate__separator"></div>
         </div>
 
         <div class="boxDebate" role="article">
           <div class="boxDebate__separator"></div>
-          <div class="boxDebate__title">
+          <div class="boxDebate__title" aria-hidden="true">
             <a href="#" role="button" class="linktext">
                <img src="assets/image_02.jpg" alt="" class="boxDebate__image">
             </a>
           </div>
           <div class="boxDebate__question">
-            <h5><a href="#" role="button" class="linkText">
+            <h5 role="heading" aria-level="2">
+              <a href="#" role="button" class="linkText">
               ¿Pena de muerte?: ONG´s y centros de estudios coinciden en que no ser&iacute;a recomendable reponerla. ¿Qué opinas?
             </a></h5>
           </div>
@@ -172,15 +179,15 @@
         </div>
     
         <div class="boxFrase">
-          <div class="boxFrase__section">frase del momento</div>
+          <div class="boxFrase__section" role="heading" aria-level="2">frase del momento</div>
           <div class="boxFrase__frase">
             "En temas val&oacute;ricos nunca, ni siquiera en los tiempos de Jaime Guzm&aacute;n, han habido &oacute;rdenes de partido ni opiniones institucionales. Nosotros entendemos que los temas val&oacute;ricos son temas personales"
           </div>
           <div class="boxFrase__autor">
-            <div class="autor__name">
+            <div class="autor__name" aria-label="Autor de la frase">
               JACQUELINE VAN RYSSELBERGHE
             </div>
-            <div class="autor__cargo">
+            <div class="autor__cargo" aria-label="cargo">
               Presidenta UDI
             </div>
           </div>
