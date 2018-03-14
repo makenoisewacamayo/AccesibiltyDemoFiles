@@ -335,10 +335,15 @@ cartola__wrap {
   display: flex;
   text-align: center; 
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .cartola__audio span {
   align-self: center;
+}
+
+.cartola__audio button:disabled {
+  opacity: 0.5;
+  background-color: #900;
 }
 .cartola__audio  img {
   max-width: 30px;

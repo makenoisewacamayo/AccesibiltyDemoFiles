@@ -10,10 +10,12 @@
 <body>
     <main class="container_24">
         <div class="grid_24">
+            <h1>Demo de SpeechSynthesis </h1>
             <div class="cartola__audio">
                 <span>
                     <button id="cartola__botonAudioPlay"><img src="assets/audio-ico.png" alt="Inicia el audio" /> </button>
                 </span>
+                <span>&nbsp;</span>
                 <span>
                 <button id="cartola__botonAudioPause">
                     <img src="assets/mute-ico.png" alt="Detiene el audio" /> </button>
@@ -123,29 +125,78 @@
         </div>
     </main>
     <script type="text/javascript">
+        var buttonPlay = document.getElementById('cartola__botonAudioPlay');
+        var buttonStop = document.getElementById('cartola__botonAudioPause');
+        buttonStop.setAttribute("disabled", "true");
+        var pause = false;
+
         if ('speechSynthesis' in window) {
 
+            var synthesis = window.speechSynthesis;
             var text = document.querySelector('table.seccion_cartola').textContent;
-         
-            window.speechSynthesis;
+            text = text.replace(/(\d{1,3})\.(\d{3})/gm,"$1$2");
+            
+            
+            var voices = synthesis.getVoices();
+            var to_speak = new SpeechSynthesisUtterance();
+            to_speak.lang = 'es-AR';
+            to_speak.voice = voices[8];
+            to_speak.rate = 0.1;
+            to_speak.text = replaced(text);
 
-            document.getElementById('cartola__botonAudioPlay').addEventListener('click', function (event) {
-                 event.preventDefault();
-                var cartola =  document.getElementById("cartola_ultimosMovimientos");
-                var msg = new SpeechSynthesisUtterance();
-                msg.lang = 'es-AR';
-                var voices = window.speechSynthesis.getVoices();
-                if ( voices.length >  0) {
-                    msg.voice = voices[8];
-                    msg.rate = 0.1;
-                    msg.text = text;
-                    window.speechSynthesis.speak(msg);
+            to_speak.onerror = function (event) {
+                console.error("Ha ocurrido un error");
+                console.error(event);
+            };
+
+            to_speak.onpause = function (event) {
+                console.info("Se ha pausado");
+                buttonPlay.removeAttribute("disabled");
+                buttonStop.setAttribute("disabled", "true");
+                pause = true;
+                console.log(event);
+            };
+
+            to_speak.onresume = function (event) {
+                console.info("Se reinicio");
+                buttonStop.removeAttribute("disabled");
+                buttonPlay.setAttribute("disabled", "true");
+                console.log(event);
+            };
+
+            to_speak.onstart = function (event) {
+                console.info("Ha empezado");
+                buttonPlay.setAttribute("disabled", "true");
+                buttonStop.removeAttribute("disabled");
+                console.log(event);
+            };
+
+            to_speak.onend = function (event) {
+                buttonPlay.removeAttribute("disabled");;
+                buttonStop.setAttribute("disabled", "true");
+                console.log("termino");
+                console.log(event);
+            };
+            
+           
+            buttonPlay.addEventListener('click', function (event) {
+                event.preventDefault();
+                if (pause) {
+                    pause = false;
+                    synthesis.resume();
+                } else {
+                    synthesis.speak(to_speak);
                 }
             });
-            
-            
+
+            buttonStop.addEventListener('click', function (event) {
+                event.preventDefault();
+                synthesis.pause();
+            });
             
         } else {
+            buttonPlay.setAttribute("disabled", "true");
+            buttonStop.setAttribute("disabled", "true");
             alert("No soporta speechSynthesis");
         }
 
