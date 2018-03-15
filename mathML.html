@@ -2,22 +2,23 @@
 <head>
   <script src="http://fred-wang.github.io/mathml.css/mspace.js"></script>
   <link rel="stylesheet" href="./common_css/math.css">
+  <link rel="stylesheet" href="./common_css/hover.css">
 </head>
 <body>
-  <h1>Exemplos de n&uacute;meros telef&oacute;nicos </h1>
-  <h2>N&uacute;mero telef&oacute;nico sin mathML</h2>
+  <h1 tabindex="0">Exemplos de n&uacute;meros telef&oacute;nicos </h1>
+  <h2 tabindex="0">N&uacute;mero telef&oacute;nico sin mathML</h2>
   <p>
-    <span aria-label="N&uacute;mero Telefonico">
+    <span aria-label="N&uacute;mero Telefonico" tabindex="0">
       <img src="assets/telefono.png"  width="32" height="32" alt="" aria-hidden=true>
     </span>
     (09) 3444 5678
   </p>
-   <h2>N&uacute;mero telef&oacute;nico con mathML</h2>
-   <p>
-     <span aria-label="N&uacute;mero Telefonico">
+   <h2 tabindex="0">N&uacute;mero telef&oacute;nico con mathML</h2>
+   <p tabindex="0">
+     <span aria-label="N&uacute;mero Telefonico" tabindex="0">
       <img src="assets/telefono.png"  width="32" height="32" alt="" aria-hidden=true>
     </span>
-     <math style="display:inline-flex">
+     <math style="display:inline-flex" tabindex="0">
         <ms lquote="(" rquote=")">
           <mn>0</mn>
           <mn>9</mn>
@@ -34,19 +35,19 @@
         <mn>8</mn>              
     </math>
   </p>
-  <h1>N&uacute;meros con mathMl</h1>
-  <p>
-    <span>N&uacute;mero Cualquiera</span>
-    <math>
+  <h1 tabindex="0">N&uacute;meros con mathMl</h1>
+  <p tabindex="0">
+    <span class="mathml__ejemplos" tabindex="0" >N&uacute;mero Cualquiera</span>
+    <math tabindex="0">
         <ms lquote="$" rquote="">
           <mn>14.333</mn>
         </ms>
     </math>
   </p>
 
-  <p>
-     <span >N&uacute;mero negativo</span>
-    <math class="debt">
+  <p tabindex="0">
+     <span  class="mathml__ejemplos" tabindex="0" >N&uacute;mero negativo</span>
+    <math class="debt tabindex="0"">
       <mtext class="sr-only">menos</mtext>
       <mo aria-hidden=true>-</mo>
       <ms lquote="$" rquote="">
@@ -55,10 +56,14 @@
     </math>
   </p>
 
-  <p>
-    <span>N&uacute;mero en Frances</span>
+  <h2 tabindex="0">Ejemlos mathML en otros idiomas</h2>
+  <p tabindex="0">
+    <span  class="mathml__ejemplos" tabindex="0">
+      <img src="assets/france_flag.png" width="16" height="16" alt="" aria-hidden=true>
+      N&uacute;mero en Frances
+    </span>
     <span lang="fr">
-    <math class="debt">
+    <math class="debt" tabindex="0">
       <mtext class="sr-only">moins</mtext>
       <mo aria-hidden=true>-</mo> 
       <ms lquote="$" rquote="">
@@ -69,9 +74,12 @@
   </p>
 
   <p>
-    <span>N&uacute;mero en Ingles</span>
+    <span  class="mathml__ejemplos" tabindex="0">
+      <img src="assets/us_flag.png" width="16" height="16" alt="" aria-hidden=true>
+      N&uacute;mero en Ingles
+    </span>
     <span lang="en">
-    <math class="debt">
+    <math class="debt" tabindex="0">
         <mtext class="sr-only">minus</mtext>
         <mo aria-hidden=true>-</mo> 
         <ms lquote="$" rquote="">

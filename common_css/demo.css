@@ -60,11 +60,15 @@
   border-bottom: 1px solid #367dcc;
   padding-bottom: 4px;
   padding-top: 1px;
-} 
+  color: #fff;
+}
+
 
 .primaryMenu__item--activo a {
   color: #fff;
 }
+
+
 
 .secondaryMenu {
   background-color: #f3f3f3;
@@ -303,11 +307,14 @@ cartola__wrap {
 .seccion_cartola {
   border-collapse: collapse;
   width: 100%;
+  font-size: large;
 }
 .seccion_cartola > caption {
   text-align: center;
-  color: rgb(14, 13, 13);
-  background-color: #fdb068;
+  color: #efefef;
+  background-color: #900;
+  font-weight: bolder;
+  padding: 10px;
   -moz-border-radius-topleft: 10px;
   -moz-border-radius-topright: 10px;
   -webkit-border-top-left-radius: 10px;
@@ -322,6 +329,8 @@ cartola__wrap {
 
 .cartola__encabezado {
   background-color: #666;
+  color: #e8e7e5;
+  font-weight: bolder;
 }
 .cartola__celda {
   background-color: #e8e7e5;
