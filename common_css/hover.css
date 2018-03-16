@@ -4,6 +4,12 @@
   color: #000;
 } 
 
+.hover_text:hover, .hover_text:focus {
+  background: #FBB531;
+  border: 2px solid rgb(99, 68, 10);
+  color: #000;
+}
+
 .td:hover,  .td:focus, th:hover, th:focus, caption:hover, caption:focus, math:hover, math:focus {
   background: #000;
   border: 2px dashed #ccc;
