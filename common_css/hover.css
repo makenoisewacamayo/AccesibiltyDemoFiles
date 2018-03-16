@@ -15,3 +15,9 @@ mathml__ejemplos:hover, mathml__ejemplos:focus {
   border: 2px dashed #ccc;
   color: #fff;
 }
+
+numeros__ejemplos:hover, numeros__ejemplos:focus {
+  background: #000;
+  border: 2px dashed #ccc;
+  color: #fff;
+}
