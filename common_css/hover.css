@@ -9,6 +9,11 @@
   border: 2px solid rgb(99, 68, 10);
   color: #000;
 }
+.boxFrase:hover, .boxFrase:focus {
+  background: #FBB531;
+  border: 2px solid rgb(99, 68, 10);
+  color: #000;
+}
 
 .td:hover,  .td:focus, th:hover, th:focus, caption:hover, caption:focus, math:hover, math:focus {
   background: #000;
