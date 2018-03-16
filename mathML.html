@@ -6,17 +6,17 @@
 </head>
 <body>
   <h1 tabindex="0">Exemplos de n&uacute;meros telef&oacute;nicos </h1>
-  <h2 tabindex="0">N&uacute;mero telef&oacute;nico sin mathML</h2>
+  <h2 tabindex="0">sin mathML</h2>
   <p>
     <span aria-label="N&uacute;mero Telefonico" tabindex="0">
-      <img src="assets/telefono.png"  width="32" height="32" alt="" aria-hidden=true>
+      <img src="assets/telefono.png"  width="24" height="24" alt="" aria-hidden=true>
     </span>
     (09) 3444 5678
   </p>
-   <h2 tabindex="0">N&uacute;mero telef&oacute;nico con mathML</h2>
-   <p tabindex="0">
+   <h2 tabindex="0">con mathML</h2>
+   <p>
      <span aria-label="N&uacute;mero Telefonico" tabindex="0">
-      <img src="assets/telefono.png"  width="32" height="32" alt="" aria-hidden=true>
+      <img src="assets/telefono.png"  width="24" height="24" alt="" aria-hidden=true>
     </span>
      <math style="display:inline-flex" tabindex="0">
         <ms lquote="(" rquote=")">
@@ -36,8 +36,8 @@
     </math>
   </p>
   <h1 tabindex="0">N&uacute;meros con mathMl</h1>
-  <p tabindex="0">
-    <span class="mathml__ejemplos" tabindex="0" >N&uacute;mero Cualquiera</span>
+  <p >
+    <span class="mathml__ejemplos" tabindex="0" >N&uacute;mero Cualquiera: &nbsp;</span>
     <math tabindex="0">
         <ms lquote="$" rquote="">
           <mn>14.333</mn>
@@ -45,8 +45,8 @@
     </math>
   </p>
 
-  <p tabindex="0">
-     <span  class="mathml__ejemplos" tabindex="0" >N&uacute;mero negativo</span>
+  <p >
+    <span  class="mathml__ejemplos" tabindex="0" >N&uacute;mero negativo: &nbsp; </span>
     <math class="debt" tabindex="0">
       <mtext class="sr-only">menos</mtext>
       <mo aria-hidden=true>-</mo>
@@ -56,11 +56,11 @@
     </math>
   </p>
 
-  <h2 tabindex="0">Ejemlos mathML en otros idiomas</h2>
-  <p tabindex="0">
+  <h2 tabindex="0">Ejemlos mathML <u>en otros idiomas</u></h2>
+  <p>
     <span  class="mathml__ejemplos" tabindex="0">
-      <img src="assets/france_flag.png" width="16" height="16" alt="" aria-hidden=true>
-      N&uacute;mero en Frances
+      <img src="assets/france_flag.png" width="24" height="24" alt="" aria-hidden=true>
+      N&uacute;mero en Frances: &nbsp;
     </span>
     <span lang="fr">
     <math class="debt" tabindex="0">
@@ -71,12 +71,25 @@
       </ms>
     </math>
     </span>
+    <pre aria-hidden="true"  tabindex="0">
+      <code>
+        &lt;span lang="fr"&gt;
+          &lt;math class="debt" tabindex="0"&gt;
+            &lt;mtext class="sr-only"&gt;moins&lt;/mtext&gt;
+            &lt;mo aria-hidden=true&gt;-&lt;/mo&gt;
+            &lt;ms lquote="$" rquote=""&gt;
+              &lt;mn&gt;15.430&lt;/mn&gt;
+            &lt;/ms&gt;
+          &lt;/math&gt;
+        &lt;/span&gt;
+      </code>
+    </pre>
   </p>
 
   <p>
     <span  class="mathml__ejemplos" tabindex="0">
-      <img src="assets/us_flag.png" width="16" height="16" alt="" aria-hidden=true>
-      N&uacute;mero en Ingles
+      <img src="assets/us_flag.png" width="24" height="24" alt="" aria-hidden=true>
+      N&uacute;mero en Ingles: &nbsp;
     </span>
     <span lang="en">
     <math class="debt" tabindex="0">
@@ -87,6 +100,19 @@
         </ms>
     </math>
     </span>
+    <pre aria-hidden="true" tabindex="0">
+          <code>
+            &lt;span lang="en"&gt;
+              &lt;math class="debt" tabindex="0"&gt;
+                &lt;mtext class="sr-only"&gt;minus&lt;/mtext&gt;
+                &lt;mo aria-hidden=true&gt;-&lt;/mo&gt;
+                &lt;ms lquote="$" rquote=""&gt;
+                  &lt;mn&gt;15.430&lt;/mn&gt;
+                &lt;/ms&gt;
+              &lt;/math&gt;
+            &lt;/span&gt;
+          </code>
+        </pre>
   </p>
   
 </body>

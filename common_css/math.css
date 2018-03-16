@@ -1,7 +1,31 @@
+p, span, math {
+  font-size: large;
+}
+
 .debt {
   color: red;
 }
 
+p {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  
+}
+p > span, p > pre {
+  align-self: center;
+}
+
+
+pre {
+    clear: left;
+    white-space: pre-wrap;
+    display: block;
+    background: hsl(220, 80%, 90%); 
+    width: 30%;
+    border: 1px  darkslategray solid;
+    border-radius: 10px;
+}
 
 .sr-only {
   position: absolute !important;
