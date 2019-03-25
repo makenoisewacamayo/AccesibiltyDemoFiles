@@ -6,47 +6,49 @@
     <link rel="stylesheet" href="./common_css/960_24_col.css">
     <link rel="stylesheet" href="./common_css/demo.css">
     <link rel="stylesheet" href="./common_css/hover.css">
-    <script src="http://fred-wang.github.io/mathml.css/mspace.js"></script>
+    <script type="text/javascript" async
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_CHTML">
+  </script>
 </head>
 <body>
     <main class="container_24">
         <div class="grid_24">
-            <h1>Demo de SpeechSynthesis </h1>
+            <h1 tabindex="0" >Demo de SpeechSynthesis </h1>
             <div class="cartola__audio">
                 <span>
-                    <button id="cartola__botonAudioPlay"><img src="assets/audio-ico.png" alt="Inicia el audio" /> </button>
+                    <button id="cartola__botonAudioPlay" aria-label="Inicia la sintesis de voz"><img src="assets/audio-ico.png" alt="Inicia el audio" aria-hidden="true"/> </button>
                 </span>
                 <span>&nbsp;</span>
                 <span>
-                <button id="cartola__botonAudioPause">
-                    <img src="assets/mute-ico.png" alt="Detiene el audio" /> </button>
+                <button id="cartola__botonAudioPause" aria-label="Pausa la sintesis de voz">
+                    <img src="assets/mute-ico.png" alt="Detiene el audio" aria-hidden="true" /> </button>
                 </span>
             </div>
             <section aria-labelledby="cartola__id" class="seccion" id="cartola_ultimosMovimientos">    
             <br aria-hidden="true"/>
             <span class="sr-only" id="cartola__id">Ultimos movimientos de su cartola en L&iacute;nea</span>
-            <table class="seccion_cartola">
-                <caption aria-hidden="true">Ultimos movimientos de su cartola en L&iacute;nea</caption>
+            <table class="seccion_cartola" tabindex="0">
+                <caption aria-hidden="true" tabindex="0">Ultimos movimientos de su cartola en L&iacute;nea</caption>
                 <tr>
-                    <th scope="col" class="cartola__encabezado">Fecha</th>
-                    <th scope="col" class="cartola__encabezado">Sucursal</th>
-                    <th scope="col" class="cartola__encabezado">N&ordm; de Operaci&oacute;n</th>
-                    <th scope="col" class="cartola__encabezado">Cheques/Cargo</th>
-                    <th scope="col" class="cartola__encabezado">Dep&oacute;sitos/Abonos</th>
-                    <th scope="col" class="cartola__encabezado">saldo</th>
+                    <th tabindex="0" scope="col" class="cartola__encabezado">Fecha</th>
+                    <th tabindex="0" scope="col" class="cartola__encabezado">Sucursal</th>
+                    <th tabindex="0" scope="col" class="cartola__encabezado">N&ordm; de Operaci&oacute;n</th>
+                    <th tabindex="0" scope="col" class="cartola__encabezado">Cheques/Cargo</th>
+                    <th tabindex="0" scope="col" class="cartola__encabezado">Dep&oacute;sitos/Abonos</th>
+                    <th tabindex="0" scope="col" class="cartola__encabezado">saldo</th>
                 </tr>
                 <tr class="cartola__columna">
-                    <th scope="row" class="cartola__celda">
-                        <span aria-hidden="true">14/02/2018</span>
-                        <span class="sr-only dates-sr" >14 de Febrero de 2018</span>
+                    <th tabindex="0" scope="row" class="cartola__celda">
+                        <span aria-hidden="true">14/02/2019</span>
+                        <span class="sr-only dates-sr" >14 de Febrero de 2019</span>
                     </th>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Sucursal </span>
                         STGO. PRINCIPAL
                     </td>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only" lang="es">Operaci&oacute;n</span>
-                        <math class="celda__nroOperacion" lang="es">
+                        <math class="celda__nroOperacion" lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <mn>5</mn>
                             <mn>5</mn>
                             <mn>2</mn>
@@ -55,25 +57,25 @@
                             <mn>6</mn>
                         </math>
                     </td>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han gastado </span>
-                        <math lang="es">
+                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <ms lquote="$" rquote="">
                                 <mn>60.789</mn>
                             </ms>
                         </math>
                     </td>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han depositado </span>
-                        <math lang="es">
+                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <ms lquote="$" rquote="">
                                 <mn>0</mn>
                             </ms>
                         </math>
                     </td>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Saldo en tu cuenta </span>
-                        <math lang="es">
+                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <ms lquote="$" rquote="">
                                 <mn>400.000</mn>
                             </ms>
@@ -81,14 +83,14 @@
                     </td>
                 </tr>
                 <tr class="cartola__columna">
-                    <th scope="row" class="cartola__celda">
-                        <span aria-hidden="true" lang="es">12/02/2018</span>
-                        <span class="sr-only dates-sr">12 de Febrero de 2018</span>
+                    <th tabindex="0" scope="row" class="cartola__celda">
+                        <span aria-hidden="true" lang="es">12/02/2019</span>
+                        <span class="sr-only dates-sr">12 de Febrero de 2019</span>
                     </th>
-                    <td class="cartola__celda">STGO. PRINCIPAL</td>
-                    <td class="cartola__celda">
+                    <td tabindex="0"class="cartola__celda">STGO. PRINCIPAL</td>
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only" lang="es">Operaci&oacute;n</span>
-                        <math class="celda__nroOperacion" lang="es">
+                        <math class="celda__nroOperacion" lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <mn>5</mn>
                             <mn>5</mn>
                             <mn>2</mn>
@@ -97,27 +99,27 @@
                             <mn>1</mn>
                         </math>
                     </td>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han gastado</span>
-                        <math lang="es">
+                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <ms lquote="$" rquote="">
                                 <mn>3.199</mn>
                             </ms>
                         </math>
                     </td>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han depositado</span>
-                        <math lang="es">
+                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <ms lquote="$" rquote="">
                                 <mn>0</mn>
                             </ms>
                         </math>
                     </td>
-                    <td class="cartola__celda">
+                    <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Saldo en tu cuenta </span>
-                        <math lang="es">
+                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
                             <ms lquote="$" rquote="">
-                                <mn>460.789</mn>
+                                <mn>396.801</mn>
                             </ms>
                         </math>
                     </td>

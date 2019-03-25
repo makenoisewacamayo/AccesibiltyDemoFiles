@@ -22,7 +22,7 @@ pre {
     white-space: pre-wrap;
     display: block;
     background: hsl(220, 80%, 90%); 
-    width: 30%;
+    width: 60%;
     border: 1px  darkslategray solid;
     border-radius: 10px;
 }

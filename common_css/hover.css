@@ -15,7 +15,7 @@
   color: #000;
 }
 
-.td:hover,  .td:focus, th:hover, th:focus, caption:hover, caption:focus, math:hover, math:focus {
+td:hover, td:focus, th:hover, th:focus, caption:hover, caption:focus, math:hover, math:focus {
   background: #000;
   border: 2px dashed #ccc;
   color: #fff;
