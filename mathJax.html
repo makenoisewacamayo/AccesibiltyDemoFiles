@@ -1,8 +1,15 @@
 <html lang="es">
 <head>
   <script type="text/javascript" async
-   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_CHTML">
+  src="./MathJax/MathJax.js?config=MML_HTMLorMML-full">
   </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      MathML: {
+        extensions: ["content-mathml.js"]
+      }
+    });
+    </script>
   <link rel="stylesheet" href="./common_css/math.css">
   <link rel="stylesheet" href="./common_css/hover.css">
 </head>
@@ -65,18 +72,20 @@
   <h1 tabindex="0">N&uacute;meros con mathJax</h1>
   <p>
     <span class="mathml__ejemplos" tabindex="0">N&uacute;mero Cualquiera: &nbsp;</span>
-      <math tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML">
-          <ms lquote="$" rquote="">
-            14.333
-          </ms>
-      </math>
+      <span lang="es">
+        <math tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML">
+            <ms lquote="" rquote="">&#36;</ms>
+            <mn>14.333</mn>
+        </math>
+      </span>
     <pre aria-hidden="true" tabindex="-1">
-      <code aria-hidden="true">
-          &lt;math  tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML"&gt;
-            &lt;ms lquote="$" rquote=""&gt;
-              15.333
-            &lt;/ms&gt;
-          &lt;/math&gt;
+      <code>
+          &lt;span lang="es"&gt;
+            &lt;math  tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+              &lt;ms lquote="" rquote=""&gt;&amp;#36;&lt;/ms&gt;
+              &lt;mn&gt;14.333&lt;/mn&gt;
+            &lt;/math&gt;
+          &lt;/span&gt;
       </code>
     </pre>
   </p>
@@ -86,20 +95,19 @@
     <span lang="es"> 
       <math class="debt" tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML">
         <mtext class="sr-only">menos</mtext>
-        <mo aria-hidden=true>-</mo>
-        <ms lquote="$" rquote="">
-          15.430
-        </ms>
+        <mo aria-hidden=true>&#x2212;</mo>
+        <ms lquote="" rquote="">&#36;</ms>
+        <mn>15.430</mn>
       </math>
      </span>
     <pre aria-hidden="true" tabindex="-1">
-          <code aria-hidden="true">
+          <code>
             &lt;span lang="es"&gt;
               &lt;math class="debt" tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML" &gt;
                 &lt;mtext class="sr-only"&gt;menos&lt;/mtext&gt;
-                &lt;ms lquote="$" rquote=""&gt;
-                  15.340
-                &lt;/ms&gt;
+                &lt;mo aria-hidden=true&gt;&amp;#x2212; &lt;/mo&gt;
+                &lt;ms lquote="" rquote=""&gt;&amp;#36;&lt;/ms&gt;
+                &lt;mn&gt;15.340 &lt;/mn&gt;
               &lt;/math&gt;
             &lt;/span&gt;
           </code>
@@ -114,12 +122,10 @@
     </span>
     <span lang="fr">
     <math class="debt" tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML">
-      <mtext class="sr-only">euro</mtext>
-      <mo aria-hidden=true>-</mo> 
-      <mn>&#8364;</mn>
-      <ms>
-        15.430
-      </ms>
+      <mtext class="sr-only">moins </mtext>
+      <mo aria-hidden=true>&#x2212;</mo> 
+      <ms lquote="" rquote="">&#8364;</ms>
+      <mn>15,430</mn>
     </math>
     </span>
     <pre aria-hidden="true"  tabindex="-1">
@@ -127,11 +133,9 @@
         &lt;span lang="fr"&gt;
           &lt;math class="debt" tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML"&gt;
             &lt;mtext class="sr-only"&gt;moins&lt;/mtext&gt;
-            &lt;mo aria-hidden=true&gt;-&lt;/mo&gt;
-            &lt;mn&gt;&amp;#8364;&lt;/mn&gt;
-            &lt;ms&gt;
-               15.430
-            &lt;/ms&gt;
+            &lt;mo aria-hidden=true&gt;&amp;#x2212;&lt;/mo&gt;
+            &lt;ms lquote="" rquote=""&gt;&amp;#8364;&lt;/ms&gt;
+            &lt;mn&gt;15.430&lt;/mn&gt;
           &lt;/math&gt;
         &lt;/span&gt;
       </code>
@@ -144,23 +148,21 @@
       N&uacute;mero en Ingles: &nbsp;
     </span>
     <span lang="en">
-    <math class="debt" tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML">
-        <mtext class="sr-only">minus</mtext>
-        <mo aria-hidden=true>-</mo> 
-        <ms lquote="$" rquote="">
-          15,430
-        </ms>
-    </math>
+      <math class="debt" tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML">
+          <mtext class="sr-only">minus</mtext>
+          <mo aria-hidden=true>&#x2212;</mo>
+          <ms lquote="" rquote="">&#36;</ms> 
+          <mn>15.430</mn>
+      </math>
     </span>
     <pre aria-hidden="true" tabindex="-1">
           <code >
             &lt;span lang="en"&gt;
               &lt;math class="debt" tabindex="0"  xmlns="http://www.w3.org/1998/Math/MathML"&gt;
                 &lt;mtext class="sr-only"&gt;minus&lt;/mtext&gt;
-                &lt;mo aria-hidden=true&gt;-&lt;/mo&gt;
-                &lt;ms lquote="$" rquote=""&gt;
-                  15,430
-                &lt;/ms&gt;
+                &lt;mo aria-hidden=true&gt;&#x2212;&lt;/mo&gt;
+                &lt;ms lquote="" rquote=""&gt;&amp;#36;&lt;/ms&gt;
+                &lt;mn&gt;15,430 &lt;/mn&gt;
               &lt;/math&gt;
             &lt;/span&gt;
           </code>
