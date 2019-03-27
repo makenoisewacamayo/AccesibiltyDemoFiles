@@ -6,24 +6,52 @@
     <link rel="stylesheet" href="./common_css/960_24_col.css">
     <link rel="stylesheet" href="./common_css/demo.css">
     <link rel="stylesheet" href="./common_css/hover.css">
+    <!--
     <script type="text/javascript" async
-   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_CHTML">
-  </script>
+    src="./MathJax/MathJax.js?config=MML_HTMLorMML-full">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        MathML: {
+          extensions: ["content-mathml.js"]
+        }
+      });
+      </script>
+    -->
 </head>
 <body>
     <main class="container_24">
         <div class="grid_24">
             <h1 tabindex="0" >Demo de SpeechSynthesis </h1>
             <div class="cartola__audio">
-                <span>
-                    <button id="cartola__botonAudioPlay" aria-label="Inicia la sintesis de voz"><img src="assets/audio-ico.png" alt="Inicia el audio" aria-hidden="true"/> </button>
-                </span>
+                <button id="cartola__botonAudioPlay" aria-label="Inicia la sintesis de voz">
+                  <img src="assets/audio-ico.png" alt="Inicia el audio" aria-hidden="true"/>
+                </button>
                 <span>&nbsp;</span>
-                <span>
                 <button id="cartola__botonAudioPause" aria-label="Pausa la sintesis de voz">
-                    <img src="assets/mute-ico.png" alt="Detiene el audio" aria-hidden="true" /> </button>
-                </span>
+                  <img src="assets/mute-ico.png" alt="Detiene el audio" aria-hidden="true" />
+                </button>
+                <span>&nbsp;</span>
+                <button id="cartola__doSpeechTotext" aria-label="Inicia el reconocimiento de voz">
+                    <img src="assets/mic-ico.png" alt="Inicia recnocimiento the voz" aria-hidden="true" />
+                </button>
+                <span>&nbsp;</span>
+                <button id="cartola__StopSpeech" aria-label="Detiene el reconocimiento de voz">
+                    <img src="assets/nomic-ico.png" alt="Inicia recnocimiento the voz" aria-hidden="true" />
+                </button>
             </div>
+            <section aria-label="cheques cobrados" class="cheques" >
+              <table class="seccion_cheques" tabindex="0" lang="es">
+                  <caption aria-hidden="true" tabindex="0">Cheques cobrados</caption>
+                <tr>
+                  <td>004</td>
+                  <td>006</td>
+                  <td>017</td>
+                </tr>
+              </table>
+            </section>
+
+            </section>
             <section aria-labelledby="cartola__id" class="seccion" id="cartola_ultimosMovimientos">    
             <br aria-hidden="true"/>
             <span class="sr-only" id="cartola__id">Ultimos movimientos de su cartola en L&iacute;nea</span>
@@ -48,38 +76,43 @@
                     </td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only" lang="es">Operaci&oacute;n</span>
-                        <math class="celda__nroOperacion" lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <mn>5</mn>
-                            <mn>5</mn>
-                            <mn>2</mn>
-                            <mn>0</mn>
-                            <mn>3</mn>
-                            <mn>6</mn>
-                        </math>
+                        <span lang="es">
+                          <math class="celda__nroOperacion" >
+                              <mn>5</mn>
+                              <mn>5</mn>
+                              <mn>2</mn>
+                              <mn>0</mn>
+                              <mn>3</mn>
+                              <mn>6</mn>
+                          </math>
+                      </span>
                     </td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han gastado </span>
-                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <ms lquote="$" rquote="">
-                                <mn>60.789</mn>
-                            </ms>
-                        </math>
+                        <span lang="es">
+                          <math >
+                              <mo>&#36;</mo>
+                              <mn>60.789</mn>
+                          </math>
+                        </span>
                     </td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han depositado </span>
-                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <ms lquote="$" rquote="">
-                                <mn>0</mn>
-                            </ms>
-                        </math>
+                        <span lang="es">
+                          <math >
+                            <mo>&#36;</mo>  
+                            <mn>0</mn>
+                          </math>
+                        </span>
                     </td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Saldo en tu cuenta </span>
-                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <ms lquote="$" rquote="">
-                                <mn>400.000</mn>
-                            </ms>
+                        <span lang="es">
+                        <math >
+                          <mo>&#36;</mo>  
+                          <mn>400.000</mn>  
                         </math>
+                        </span>
                     </td>
                 </tr>
                 <tr class="cartola__columna">
@@ -90,49 +123,59 @@
                     <td tabindex="0"class="cartola__celda">STGO. PRINCIPAL</td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only" lang="es">Operaci&oacute;n</span>
-                        <math class="celda__nroOperacion" lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <mn>5</mn>
-                            <mn>5</mn>
-                            <mn>2</mn>
-                            <mn>0</mn>
-                            <mn>1</mn>
-                            <mn>1</mn>
-                        </math>
+                        <span lang="es">
+                          <math class="celda__nroOperacion" >
+                              <mn>5</mn>
+                              <mn>5</mn>
+                              <mn>2</mn>
+                              <mn>0</mn>
+                              <mn>1</mn>
+                              <mn>1</mn>
+                          </math>
+                        </span>
                     </td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han gastado</span>
-                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <ms lquote="$" rquote="">
-                                <mn>3.199</mn>
-                            </ms>
-                        </math>
+                        <span lang="es">
+                          <math >
+                            <mo>&#36;</mo>  
+                            <mn>3.199</mn>    
+                          </math>
+                        </span>
                     </td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Se han depositado</span>
-                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <ms lquote="$" rquote="">
-                                <mn>0</mn>
-                            </ms>
-                        </math>
+                        <span lang="es">
+                          <math >
+                            <mo>&#36;</mo>  
+                            <mn>0</mn>  
+                          </math>
+                        </span>
                     </td>
                     <td tabindex="0" class="cartola__celda">
                         <span class="sr-only">Saldo en tu cuenta </span>
-                        <math lang="es" xmlns="http://www.w3.org/1998/Math/MathML">
-                            <ms lquote="$" rquote="">
-                                <mn>396.801</mn>
-                            </ms>
-                        </math>
+                        <span lang="es">
+                            <math >
+                              <mo>&#36;</mo>  
+                              <mn>396.801</mn>  
+                            </math>
+                        </span>
+                      </span>
                     </td>
                 </tr>
-                
             </table>
             </section>
         </div>
     </main>
     <script type="text/javascript">
+         navigator.permissions.query({name:'midi', sysex:false}).then(function(p) {
+          console.log(p)
+        });
+       
         var buttonPlay = document.getElementById('cartola__botonAudioPlay');
         var buttonStop = document.getElementById('cartola__botonAudioPause');
         buttonStop.setAttribute("disabled", "true");
+        var voices = [];
         var pause = false;
 
         if ('speechSynthesis' in window) {
@@ -143,10 +186,13 @@
             text = text.replace(/(\d{1,3})\.(\d{3})/gm,"$1$2");
             text = text.replace(/(\d{2}\/\d{2}\/\d{4})/gm,"");
            
-            var voices = synthesis.getVoices();
             var to_speak = new SpeechSynthesisUtterance();
+            synthesis.onvoiceschanged = function() {
+                voices = synthesis.getVoices()
+                to_speak.voice = voices[8];
+            };
+                
             to_speak.lang = 'es-AR';
-            to_speak.voice = voices[8];
             to_speak.rate = 0.9;
             to_speak.text = text;
 
@@ -178,34 +224,139 @@
             };
 
             to_speak.onend = function (event) {
-                buttonPlay.removeAttribute("disabled");;
-                buttonStop.setAttribute("disabled", "true");
-                console.log("termino");
-                console.log(event);
+              buttonPlay.removeAttribute("disabled");;
+              buttonStop.setAttribute("disabled", "true");
+              console.log("termino");
+              console.log(event);
             };
-            
-           
+
             buttonPlay.addEventListener('click', function (event) {
-                event.preventDefault();
-                if (pause) {
-                    pause = false;
-                    synthesis.resume();
-                } else {
-                    synthesis.speak(to_speak);
-                }
+              event.preventDefault();
+              if (pause) {
+                  pause = false;
+                  synthesis.resume();
+              } else {
+                  synthesis.speak(to_speak);
+                  console.log(to_speak)
+                  console.log(synthesis)
+              }
             });
 
             buttonStop.addEventListener('click', function (event) {
                 event.preventDefault();
                 synthesis.pause();
             });
-            
+          
         } else {
             buttonPlay.setAttribute("disabled", "true");
             buttonStop.setAttribute("disabled", "true");
             alert("No soporta speechSynthesis");
         }
 
+    </script>
+    <script type="text/javascript">
+    
+     var buttonRecognizeStart = document.getElementById('cartola__doSpeechTotext');
+     var buttonRecognizeStop = document.getElementById('cartola__StopSpeech');
+     buttonRecognizeStop.setAttribute('disabled',true);
+     
+     var listening = false;
+     if ('webkitSpeechRecognition' in window) {
+      var speechToText = new webkitSpeechRecognition();
+      speechToText.continuous = true;
+      speechToText.lang = 'es-cl';
+      speechToText.interimResults = true;
+      speechToText.maxAlternatives = 5;
+      var reg = new RegExp('cheque',"ig");
+      var final_transcript = '';
+      var commando=false;
+
+      function readCheques() {
+        commando = true;
+        speechToText.stop();
+        
+      }
+      
+      buttonRecognizeStart.addEventListener('click', function (event) {
+            event.preventDefault();
+            final_transcript = '';
+            if (listening) {
+                listening = false;
+                speechToText.stop();
+            } else {
+              listening = true;
+              speechToText.start();
+            }
+        });
+
+      buttonRecognizeStop.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (listening) {
+          listening = false;
+          speechToText.stop();
+        }
+      });
+
+      speechToText.onstart = function (event) {
+          console.info("Ha empezado");
+          buttonPlay.setAttribute("disabled", "true");
+          buttonRecognizeStart.setAttribute("disabled", "true");
+          buttonRecognizeStop.removeAttribute("disabled");
+          console.log(event);
+      };
+
+      speechToText.onend = function (event) {
+        buttonRecognizeStart.removeAttribute("disabled");
+        buttonPlay.removeAttribute("disabled");
+        buttonRecognizeStop.setAttribute("disabled", "true");
+        console.log("termino");
+        console.log(event);
+        if (commando == true) {
+            var text2 = document.querySelector('table.seccion_cheques').textContent;
+            console.log(text2);
+            var to_speak2 = new SpeechSynthesisUtterance();
+            to_speak2.lang = 'es-AR';
+            to_speak2.voice = voices[8];
+            to_speak2.rate = 0.9;
+            to_speak2.text2 = text2;
+            synthesis.speak(to_speak2);
+            console.log(synthesis);
+            console.log(to_speak2);
+            commando = false;
+            
+        }
+
+       };
+
+      speechToText.onresult = function (event) {
+        console.info("Detecta voz");
+        var interim_transcript = '';
+
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            final_transcript += event.results[i][0].transcript;
+          } else {
+            interim_transcript += event.results[i][0].transcript;
+          }
+        }
+        
+        if ( reg.test(final_transcript) || reg.test(interim_transcript)) {
+          console.log("reconocio el commando")
+          readCheques();
+        }
+
+        console.log('interim_transcript: ',interim_transcript);
+        console.log('final_transcript: ', final_transcript);
+        console.log(event);
+      }
+
+
+     } else {
+      buttonRecognizeStart.setAttribute("disabled", "true");
+      buttonRecognizeStop.setAttribute("disabled", "true");
+      alert("No soporta reconocienti de voz");
+     }
+     
     </script>
 
     

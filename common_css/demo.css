@@ -304,6 +304,39 @@ cartola__wrap {
 .hidden {
   display: none;
 }
+
+.cheques {
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.seccion_cheques {
+  border-collapse: collapse;
+  width: 80%;
+  font-size: large;
+}
+
+.seccion_cheques > caption {
+  text-align: center;
+  color: #efefef;
+  background-color: #900;
+  font-weight: bolder;
+  padding: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+}
+
+
+.seccion_cheques TD {
+ text-align: center;
+ align-content: center;
+}
+
+
 .seccion_cartola {
   border-collapse: collapse;
   width: 100%;
