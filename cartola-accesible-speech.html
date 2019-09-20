@@ -196,7 +196,7 @@
             to_speak.lang = 'es-AR';
             to_speak.rate = 0.9;
             to_speak.text = text;
-            to_speak.volume = 10;
+            to_speak.volume = 1;
             to_speak.pitch = 1; 
 
             to_speak.onerror = function (event) {
@@ -207,7 +207,7 @@
             to_speak.onpause = function (event) {
                 console.info("Se ha pausado");
                 buttonPlay.removeAttribute("disabled");
-                buttonRecognizeStart2.removeAttribute("disabled", "true");
+                buttonRecognizeStart2.removeAttribute("disabled")
                 buttonStop.setAttribute("disabled", "true");
                 pause = true;
                 console.log(event);
@@ -233,6 +233,7 @@
             to_speak.onend = function (event) {
               buttonPlay.removeAttribute("disabled");;
               buttonStop.setAttribute("disabled", "true");
+              buttonRecognizeStart2.removeAttribute("disabled")
               console.log("termino");
               console.log(event);
             };
@@ -279,9 +280,19 @@
       var commando=false;
 
       function readCheques() {
-        commando = true;
         speechToText.stop();
-        
+        var text2 = document.querySelector('table.seccion_cheques').textContent;
+        console.log(text2);
+        var to_speak2 = new SpeechSynthesisUtterance();
+        to_speak2.lang = 'es-AR';
+        to_speak2.voice = voices[8];
+        to_speak2.rate = 0.9;
+        to_speak2.volume = 1;
+        to_speak2.pitch = 1;
+        to_speak2.text = text2;
+        synthesis.speak(to_speak2);
+        console.log(synthesis);
+        console.log(to_speak2);
       }
       
       buttonRecognizeStart.addEventListener('click', function (event) {
@@ -290,13 +301,10 @@
             buttonPlay.setAttribute("disabled", "true");
             buttonRecognizeStop.removeAttribute("disabled");
             final_transcript = '';
-            if (listening) {
-                listening = false;
-                speechToText.stop();
-            } else {
+           
               listening = true;
               speechToText.start();
-            }
+            
         });
 
       buttonRecognizeStop.addEventListener('click', function (event) {
@@ -304,41 +312,21 @@
         buttonRecognizeStart.removeAttribute("disabled");
         buttonPlay.removeAttribute("disabled");
         buttonRecognizeStop.setAttribute("disabled", "true");
-        if (listening) {
+      
           listening = false;
           speechToText.stop();
-        }
+        
       });
 
       speechToText.onstart = function (event) {
-          console.info("Ha empezado");
-          buttonPlay.setAttribute("disabled", "true");
-          buttonRecognizeStart.setAttribute("disabled", "true");
-          buttonRecognizeStop.removeAttribute("disabled");
+          console.info("Ha empezado el reconociento de texto");
           console.log(event);
       };
 
       speechToText.onend = function (event) {
-        buttonRecognizeStart.removeAttribute("disabled");
-        buttonPlay.removeAttribute("disabled");
-        buttonRecognizeStop.setAttribute("disabled", "true");
-        console.log("termino");
+        console.log("termino el recocimiento de voz");
         console.log(event);
-        if (commando == true) {
-            var text2 = document.querySelector('table.seccion_cheques').textContent;
-            console.log(text2);
-            var to_speak2 = new SpeechSynthesisUtterance();
-            to_speak2.lang = 'es-AR';
-            to_speak2.voice = voices[8];
-            to_speak2.rate = 0.9;
-            to_speak2.text = text2;
-            synthesis.speak(to_speak2);
-            console.log(synthesis);
-            console.log(to_speak2);
-            commando = false;
-            
-        }
-
+        
        };
 
       speechToText.onresult = function (event) {
