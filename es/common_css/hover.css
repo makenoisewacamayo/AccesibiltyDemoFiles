@@ -1,0 +1,38 @@
+.li:hover,  .li:focus, a:hover, a:focus, h1:hover, h1:focus, h2:hover, h2:focus {
+  background: #FBB531;
+  border: 2px solid rgb(99, 68, 10);
+  color: #000;
+} 
+
+.hover_text:hover, .hover_text:focus {
+  background: #FBB531;
+  border: 2px solid rgb(99, 68, 10);
+  color: #000;
+}
+.boxFrase:hover, .boxFrase:focus {
+  background: #FBB531;
+  border: 2px solid rgb(99, 68, 10);
+  color: #000;
+}
+
+td:hover, td:focus, th:hover, th:focus, caption:hover, caption:focus, math:hover, math:focus {
+  background: #000;
+  border: 2px dashed #ccc;
+  color: #fff;
+} 
+
+span.mathml__ejemplos:hover, span.mathml__ejemplos:focus {
+  background: #000;
+  border: 2px dashed #ccc;
+  color: #fff;
+}
+
+span.numeros__ejemplos:hover, span.numeros__ejemplos:focus {
+  background: #000;
+  border: 2px dashed #ccc;
+  color: #fff;
+}
+
+pre:hover, pre:focus {
+    border: 2px dashed #f00;
+} 
