@@ -1,0 +1,152 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./common_css/reset.css">
+    <link rel="stylesheet" href="./common_css/960_24_col.css">
+    <link rel="stylesheet" href="./common_css/blog.css">  
+    <!--
+    <script type="text/javascript" async
+    src="./MathJax/MathJax.js?config=MML_HTMLorMML-full">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        MathML: {
+          extensions: ["content-mathml.js"]
+        }
+      });
+      </script>
+    -->
+</head>
+<body>
+   <main class="container_24">
+     <section class=" push_9 grid_6 blog__audio" >
+        <button id="blog__botonAudioPlay" aria-label="Inicia la sintesis de voz">
+          <img src="assets/audio-ico.png" alt="Inicia el audio" aria-hidden="true"/>
+        </button>
+        <span>&nbsp;</span>
+        <button id="blog__botonAudioPause" aria-label="Pausa la sintesis de voz">
+          <img src="assets/mute-ico.png" alt="Detiene el audio" aria-hidden="true" />
+        </button>
+      </section>
+
+   <article  class="grid_24">
+    <h1 class="blog__title">La ciberseguridad, un elemento a tener en cuenta en nuestro día a día</h1>
+    <div class="blog__author">
+      Escrito por
+      <a class="authorurl" href="#" rel="author">Javier Martín</a>, 12 de diciembre de 2018 a las 17:30
+    </div>
+      <header class="grid_20 push_2">
+        <div>
+         <img src='https://i2.wp.com/blogthinkbig.com/wp-content/uploads/2018/11/hacker-1944688_1280-e1544625426522.jpg?resize=610%2C225&ssl=1' alt='La ciberseguridad, un elemento a tener en cuenta en nuestro día a día'></div> 
+        </div>
+      </header>
+    
+  <section class="grid_24 blog__resumen">
+    <h2>En un encuentro reciente con la consultora KPMG, pudimos observar cuáles eran las principales preocupaciones dentro del ámbito de la ciberseguridad. Os resumimos las cuestiones que, a la postre, marcarán el calendario tanto de grandes empresas como de usuarios particulares.</h2>
+  </section>
+    <section class="grid_24 blog__articulo">
+      <p>El ámbito digital ha abierto nuevas vías de comunicación, de transmisión de datos, etc. Además, ha acelerado todo el desarrollo humano desde su creación. La conectividad que ha permitido la digitalización ha supuesto una conexión entre dispositivos nunca antes vista, y ha provocado a su vez que <strong>la relación entre ser humano y máquina sea total</strong>.</p>
+      <p>Llegados a este punto, se podría considerar la entrada de lleno en el mundo tecnológico como algo idílico. <strong>Una cuestión de comodidad y mejora de todos los niveles de vida en nuestro día a día</strong>. Pero, como es lógico, cada ventaja tiene su inconveniente. En este caso, es la inseguridad de todos los elementos conectados a la red dentro de nuestro ámbito personal. Tanto a nivel individual como empresarial.</p>
+      <p>Por ello, uno de los principios más importantes de la digitalización ha sido <a href="https://blogthinkbig.com/nuestros-datos-personales-a-examen">la incorporación de la ciberseguridad al día a día dentro de la red</a>. Desde la aceptación de cookies en diferentes páginas de Internet hasta controles antifraude en entidades bancarias.</p>
+      <h2>Los nuevos retos de hoy en día para la ciberseguridad</h2>
+      <p>Una de las estrategias más importantes que se ha establecido recientemente en este aspecto es el GDPR (Reglamento General de Protección de Datos). Aplicada en mayo, esta ley de ámbito europeo <strong>ha supuesto un gran avance en la seguridad en la red</strong>.</p>
+      <p>Con ello, la información personal de los usuarios se ha podido proteger, o al menos mejorar su seguridad. Pese a todo, y aunque lleva vigente desde entonces, todavía muchas empresas de distintos sectores siguen ampliando su respuesta frente a posibles brechas.</p>
+    </section>
+  </article>
+</main>
+<script type="text/javascript">
+  navigator.permissions.query({name:'midi', sysex:false}).then(function(p) {
+   console.log(p)
+ });
+
+ var buttonPlay = document.getElementById('blog__botonAudioPlay');
+ var buttonStop = document.getElementById('blog__botonAudioPause');
+ buttonStop.setAttribute("disabled", "true");
+ var voices = [];
+ var pause = false;
+
+ if ('speechSynthesis' in window) {
+
+     var synthesis = window.speechSynthesis;
+     var resumen = document.querySelector('.blog__resumen').textContent;
+     var articulo =  document.querySelector('.blog__articulo').textContent;
+     var text = resumen + articulo;
+     var to_speak = new SpeechSynthesisUtterance();
+     var voices;
+     synthesis.onvoiceschanged = function() {
+        voices = synthesis.getVoices()
+        to_speak.voice = voices[8];
+    };
+     to_speak.lang = 'es-AR';
+     to_speak.rate = 0.9;
+     to_speak.text = text;
+     to_speak.volume = 1;
+     to_speak.pitch = 1; 
+
+     to_speak.onerror = function (event) {
+         console.error("Ha ocurrido un error");
+         console.table(event);
+     };
+
+     to_speak.onpause = function (event) {
+         console.info("Se ha pausado");
+         buttonPlay.removeAttribute("disabled");
+         buttonStop.setAttribute("disabled", "true");
+         pause = true;
+         console.table(event);
+     };
+
+     to_speak.onresume = function (event) {
+         console.info("Se reinicio");
+         buttonStop.removeAttribute("disabled");
+         buttonPlay.setAttribute("disabled", "true");
+         console.table(event);
+     };
+
+     to_speak.onstart = function (event) {
+         speechToText.stop();
+         console.info("Ha empezado");
+         buttonPlay.setAttribute("disabled", "true");
+         buttonStop.removeAttribute("disabled");
+         console.table(event);
+     };
+
+     to_speak.onend = function (event) {
+       buttonPlay.removeAttribute("disabled");;
+       buttonStop.setAttribute("disabled", "true");
+       console.log("termino");
+       console.table(event);
+     };
+
+     buttonPlay.addEventListener('click', function (event) {
+       event.preventDefault();
+       if (pause) {
+           pause = false;
+           synthesis.resume();
+       } else {
+           synthesis.speak(to_speak);
+           console.log(to_speak)
+           console.log(synthesis)
+       }
+     });
+
+     buttonStop.addEventListener('click', function (event) {
+         event.preventDefault();
+         synthesis.pause();
+     });
+   
+ } else {
+     buttonPlay.setAttribute("disabled", "true");
+     buttonStop.setAttribute("disabled", "true");
+     alert("No soporta speechSynthesis");
+ }
+
+ function strip(html){
+   var doc = new DOMParser().parseFromString(html, 'text/html');
+   return doc.body.textContent || "";
+ }
+
+</script>
+
+</body>
+</html>

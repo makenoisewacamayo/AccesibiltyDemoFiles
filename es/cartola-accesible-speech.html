@@ -201,7 +201,7 @@
 
             to_speak.onerror = function (event) {
                 console.error("Ha ocurrido un error");
-                console.error(event);
+                console.table(event);
             };
 
             to_speak.onpause = function (event) {
@@ -218,7 +218,7 @@
                 buttonStop.removeAttribute("disabled");
                 buttonRecognizeStart2.setAttribute("disabled", "true");
                 buttonPlay.setAttribute("disabled", "true");
-                console.log(event);
+                console.table(event);
             };
 
             to_speak.onstart = function (event) {
@@ -227,7 +227,7 @@
                 buttonPlay.setAttribute("disabled", "true");
                 buttonRecognizeStart2.setAttribute("disabled", "true");
                 buttonStop.removeAttribute("disabled");
-                console.log(event);
+                console.table(event);
             };
 
             to_speak.onend = function (event) {
@@ -235,7 +235,7 @@
               buttonStop.setAttribute("disabled", "true");
               buttonRecognizeStart2.removeAttribute("disabled")
               console.log("termino");
-              console.log(event);
+              console.table(event);
             };
 
             buttonPlay.addEventListener('click', function (event) {
@@ -280,7 +280,7 @@
       var commando=false;
 
       function readCheques() {
-        speechToText.stop();
+        // speechToText.stop();
         var text2 = document.querySelector('table.seccion_cheques').textContent;
         console.log(text2);
         var to_speak2 = new SpeechSynthesisUtterance();
@@ -320,12 +320,12 @@
 
       speechToText.onstart = function (event) {
           console.info("Ha empezado el reconociento de texto");
-          console.log(event);
+          console.table(event);
       };
 
       speechToText.onend = function (event) {
         console.log("termino el recocimiento de voz");
-        console.log(event);
+        console.table(event);
         
        };
 
@@ -348,7 +348,12 @@
 
         console.log('interim_transcript: ',interim_transcript);
         console.log('final_transcript: ', final_transcript);
-        console.log(event);
+        console.table(event);
+      }
+
+      speechToText.onerror = function (event) {
+        console.log('**************** error ********');  
+        console.table(event);
       }
 
 

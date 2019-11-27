@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; 
+}
+
+.blog__title {
+  color: #111;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  white-space: nowrap;
+  line-height: 1.27;
+}
+
+.blog__author {
+  font-size: 1.8rem;
+  line-height: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.27;
+}
+
+.blog__resumen {
+  margin: 2rem 0;
+  font-size: 2.2rem;
+  line-height: 1.27;
+}
+
+.blog__articulo {
+  margin: 0 2rem;
+  font-size: 1.5rem;
+}
+
+.blog__audio {
+  display: flex;
+  text-align: center; 
+  align-items: center;
+  justify-content: center;
+}
+
+.blog__audio button:disabled {
+  opacity: 0.5;
+  background-color: #111;
+}
+.blog__audio  img {
+  max-width: 30px;
+  max-height: 30px;
+}
