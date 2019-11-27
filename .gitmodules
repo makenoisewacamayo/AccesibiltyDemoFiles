@@ -1,0 +1,3 @@
+[submodule "web-speech"]
+	path = web-speech
+	url = git@github.com:luixaviles/web-speech-angular.git
